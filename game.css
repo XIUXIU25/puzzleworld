@@ -1,0 +1,200 @@
+.game-intro {
+  max-width: 46rem;
+}
+
+.reveal-toggle {
+  margin-top: var(--space-3);
+  margin-right: var(--space-2);
+  accent-color: var(--accent);
+}
+
+.reveal-label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 var(--space-2) var(--space-2) 0;
+}
+
+.game-section {
+  margin-top: var(--space-5);
+}
+
+.game-section > * + * {
+  margin-top: var(--space-4);
+}
+
+.board-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.85fr);
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.crossword-board {
+  width: min(100%, 48rem);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  background: #fff;
+}
+
+.cell {
+  position: relative;
+  aspect-ratio: 1;
+  border: 1px solid #8d8d8d;
+  background: #fff;
+}
+
+.cell--block {
+  background: #383838;
+}
+
+.cell--open {
+  background: #fff;
+}
+
+.cell--start {
+  background: #fff;
+}
+
+.cell--selected {
+  background: #fff;
+}
+
+.cell--open::before {
+  content: attr(data-number);
+  position: absolute;
+  top: 0.25rem;
+  left: 0.28rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1b1b1b;
+  line-height: 1;
+}
+
+.cell--start::before,
+.cell--selected::before,
+.cell[data-number]::before {
+  content: attr(data-number);
+  position: absolute;
+  top: 0.25rem;
+  left: 0.28rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.cell input {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  caret-color: var(--accent);
+}
+
+.cell input:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+
+.cell:focus-within {
+  background: #f5f5f5;
+}
+
+.clue-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 6vw, 4rem);
+  align-items: start;
+}
+
+.clue-columns section {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.clue-columns h2,
+.clue-columns h3 {
+  margin: 0 0 var(--space-4);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.clue-columns ol {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.clue-columns li + li {
+  margin-top: var(--space-4);
+}
+
+.clue-columns li {
+  font-size: clamp(1.1rem, 2vw, 1.55rem);
+  line-height: 1.4;
+}
+
+.clue-columns li::marker {
+  font-weight: 800;
+}
+
+.solution-panel {
+  display: none;
+  margin-top: var(--space-5);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--border);
+}
+
+#reveal-solution:checked ~ .solution-panel {
+  display: block;
+}
+
+.solution-board .cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
+  font-weight: 700;
+}
+
+.solution-board .cell--open {
+  color: var(--text);
+}
+
+.solution-board .cell--open::before {
+  content: attr(data-number);
+}
+
+.solution-board .cell--start::before,
+.solution-board .cell--selected::before,
+.solution-board .cell[data-number]::before {
+  color: #1b1b1b;
+}
+
+.solution-board .cell--letter {
+  letter-spacing: 0.05em;
+}
+
+.solution-note {
+  max-width: 40rem;
+}
+
+@media (max-width: 56rem) {
+  .board-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 42rem) {
+  .clue-columns {
+    grid-template-columns: 1fr;
+  }
+}

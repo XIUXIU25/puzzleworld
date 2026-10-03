@@ -1,0 +1,49 @@
+.about-stack {
+  margin-top: var(--space-5);
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(12rem, 0.8fr);
+  gap: var(--space-5);
+  align-items: center;
+}
+
+.about-photo {
+  margin: 0;
+}
+
+.about-photo img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.about-stack h2,
+.about-stack p,
+.about-meta h2 {
+  margin-top: 0;
+}
+
+.about-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+}
+
+.about-meta ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+@media (max-width: 42rem) {
+  .about-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .about-meta {
+    grid-template-columns: 1fr;
+  }
+}

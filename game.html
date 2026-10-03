@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Xiuxiu Ying | Crossword</title>
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="game.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Primary">
+        <a class="site-brand">Xiuxiu Ying</a>
+        <ul class="site-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="game.html" aria-current="page">Crossword</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content" class="page">
+      <section class="game-intro content">
+        <p class="lead">Mini crossword</p>
+        <h1>Type one letter into each open square.</h1>
+        <p>This is a small 5 by 5 crossword. Use the checkbox to reveal the solution on keyboard or touch devices.</p>
+      </section>
+
+      <section class="game-section">
+        <h2>Play the puzzle</h2>
+        <input type="checkbox" id="reveal-solution" class="reveal-toggle">
+        <label for="reveal-solution" class="reveal-label">Show solution</label>
+
+        <div class="board-layout">
+          <div>
+            <div class="crossword-board" aria-label="Mini crossword grid">
+              <div class="cell cell--selected" data-number="1"><input type="text" maxlength="1" aria-label="Row 1, column 1, 1 Across and 1 Down"></div>
+              <div class="cell" data-number="2"><input type="text" maxlength="1" aria-label="Row 1, column 2, 2 Down"></div>
+              <div class="cell" data-number="3"><input type="text" maxlength="1" aria-label="Row 1, column 3, 3 Down"></div>
+              <div class="cell" data-number="4"><input type="text" maxlength="1" aria-label="Row 1, column 4, 4 Down"></div>
+              <div class="cell" data-number="5"><input type="text" maxlength="1" aria-label="Row 1, column 5, 5 Down"></div>
+
+              <div class="cell cell--start" data-number="6"><input type="text" maxlength="1" aria-label="Row 2, column 1, 6 Across"></div>
+              <div class="cell"><input type="text" maxlength="1" aria-label="Row 2, column 2"></div>
+              <div class="cell"><input type="text" maxlength="1" aria-label="Row 2, column 3"></div>
+              <div class="cell"><input type="text" maxlength="1" aria-label="Row 2, column 4"></div>
+              <div class="cell"><input type="text" maxlength="1" aria-label="Row 2, column 5"></div>
+
+              <div class="cell cell--start" data-number="7"><input type="text" maxlength="1" aria-label="Row 3, column 1, 7 Across"></div>
+              <div class="cell"><input type="text" maxlength="1" aria-label="Row 3, column 2"></div>
+              <div class="cell"><input type="text" maxlength="1" aria-label="Row 3, column 3"></div>
+              <div class="cell"><input type="text" maxlength="1" aria-label="Row 3, column 4"></div>
+              <div class="cell"><input type="text" maxlength="1" aria-label="Row 3, column 5"></div>
+
+              <div class="cell cell--start" data-number="8"><input type="text" maxlength="1" aria-label="Row 4, column 1, 8 Across"></div>
+              <div class="cell"><input type="text" maxlength="1" aria-label="Row 4, column 2"></div>
+              <div class="cell"><input type="text" maxlength="1" aria-label="Row 4, column 3"></div>
+              <div class="cell"><input type="text" maxlength="1" aria-label="Row 4, column 4"></div>
+              <div class="cell cell--block" aria-hidden="true"></div>
+
+              <div class="cell cell--start" data-number="9"><input type="text" maxlength="1" aria-label="Row 5, column 1, 9 Across"></div>
+              <div class="cell"><input type="text" maxlength="1" aria-label="Row 5, column 2"></div>
+              <div class="cell"><input type="text" maxlength="1" aria-label="Row 5, column 3"></div>
+              <div class="cell"><input type="text" maxlength="1" aria-label="Row 5, column 4"></div>
+              <div class="cell cell--block" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <div class="clue-columns">
+            <section aria-labelledby="across-clues">
+              <h3 id="across-clues">Across</h3>
+              <ol>
+                <li value="1">H2O</li>
+                <li value="6">Mac or Granny Smith</li>
+                <li value="7">Rail vehicle</li>
+                <li value="8">Historic periods</li>
+                <li value="9">Circle jewelry</li>
+              </ol>
+            </section>
+            <section aria-labelledby="down-clues">
+              <h3 id="down-clues">Down</h3>
+              <ol>
+                <li value="1">Liquid need</li>
+                <li value="2">Fruit brand or fruit</li>
+                <li value="3">Teach repeatedly</li>
+                <li value="4">Time periods</li>
+                <li value="5">Doorbell sound</li>
+              </ol>
+            </section>
+          </div>
+        </div>
+
+        <section class="solution-panel" aria-labelledby="solution-title">
+          <h3 id="solution-title">Solution</h3>
+          <p class="solution-note">The completed grid is shown below.</p>
+          <div class="crossword-board solution-board" aria-label="Completed crossword grid">
+            <div class="cell cell--selected cell--letter" data-number="1">W</div>
+            <div class="cell cell--letter" data-number="2">A</div>
+            <div class="cell cell--letter" data-number="3">T</div>
+            <div class="cell cell--letter" data-number="4">E</div>
+            <div class="cell cell--letter" data-number="5">R</div>
+
+            <div class="cell cell--start cell--letter" data-number="6">A</div>
+            <div class="cell cell--letter">P</div>
+            <div class="cell cell--letter">P</div>
+            <div class="cell cell--letter">L</div>
+            <div class="cell cell--letter">E</div>
+
+            <div class="cell cell--start cell--letter" data-number="7">T</div>
+            <div class="cell cell--letter">R</div>
+            <div class="cell cell--letter">A</div>
+            <div class="cell cell--letter">I</div>
+            <div class="cell cell--letter">N</div>
+
+            <div class="cell cell--start cell--letter" data-number="8">E</div>
+            <div class="cell cell--letter">R</div>
+            <div class="cell cell--letter">A</div>
+            <div class="cell cell--letter">S</div>
+            <div class="cell cell--block" aria-hidden="true"></div>
+
+            <div class="cell cell--start cell--letter" data-number="9">R</div>
+            <div class="cell cell--letter">I</div>
+            <div class="cell cell--letter">N</div>
+            <div class="cell cell--letter">G</div>
+            <div class="cell cell--block" aria-hidden="true"></div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Enjoy the puzzle!</p>
+    </footer>
+  </body>
+</html>
